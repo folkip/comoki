@@ -3,8 +3,9 @@
 // See https://kit.svelte.dev/docs#typescript
 // for information about these interfaces
 declare namespace App {
-	// eslint-disable-next-line @typescript-eslint/no-empty-interface
-	interface Locals {}
+	interface Locals {
+		ghUser: string;
+	}
 
 	// eslint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Platform {}

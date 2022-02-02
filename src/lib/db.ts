@@ -1,9 +1,7 @@
-import 'dotenv/config';
-import { env } from 'node:process';
 import { createConnection } from 'mysql2';
 import type { Connection } from 'mysql2';
 
-const { DB_URL } = env;
+import { DB_URL } from '$lib/config';
 
 if (!DB_URL) {
 	throw new Error('Missing ENV vars');
