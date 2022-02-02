@@ -2,7 +2,7 @@
 	export async function load({ session }) {
 		return {
 			props: {
-				user: session.user
+				user: session.ghUser
 			}
 		};
 	}

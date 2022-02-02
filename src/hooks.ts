@@ -16,6 +16,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 export const getSession: GetSession = async (request) => {
 	return {
-		user: request.locals.ghUser
+		ghUser: request.locals.ghUser
 	};
 };
