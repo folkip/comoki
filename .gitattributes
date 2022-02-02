@@ -1,0 +1,2 @@
+*.cjs linguist-language=Text
+*.config.js linguist-language=Text
