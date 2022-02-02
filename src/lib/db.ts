@@ -1,22 +1,21 @@
 import { createConnection } from 'mysql2';
-import type { Connection } from 'mysql2';
 
 import { DB_URL } from '$lib/config';
+
+import type { Connection } from 'mysql2';
 
 if (!DB_URL) {
 	throw new Error('Missing ENV vars');
 }
 
 class DB {
-	private conn: Connection | null = null;
+	#conn: Connection | null = null;
 
-	constructor(private url: string) {
-		this.url = url;
-	}
+	constructor(private url: string) {}
 
 	async getConnection() {
-		this.conn ||= createConnection(this.url);
-		return this.conn;
+		this.#conn ||= createConnection(this.url);
+		return this.#conn;
 	}
 }
 
