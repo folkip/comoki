@@ -25,4 +25,3 @@ class DB {
 }
 
 export default new DB(DB_URL);
-
