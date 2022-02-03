@@ -1,6 +1,6 @@
 import cookie from 'cookie';
 
-import type { Handle, GetSession } from '@sveltejs/kit';
+import type { GetSession, Handle } from '@sveltejs/kit';
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const cookies = cookie.parse(event.request.headers.get('cookie') || '');
