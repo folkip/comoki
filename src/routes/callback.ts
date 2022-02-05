@@ -1,5 +1,4 @@
 import { GH_CLIENT_ID, GH_CLIENT_SECRET } from '$lib/config';
-import logger from '$lib/logger';
 
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -9,8 +8,6 @@ export const get: RequestHandler = async ({ locals, url }) => {
 	const user = await getUser(accessToken);
 
 	locals.ghUser = user;
-
-  logger.info(`User ${user.login} logged in`);
 
 	return {
 		status: 302,

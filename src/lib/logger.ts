@@ -1,6 +1,6 @@
 import { configure, getLogger } from 'log4js';
 
-configure("data.log");
+configure('data.log');
 
 const logger = getLogger('logger');
 
