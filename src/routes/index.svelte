@@ -1,11 +1,13 @@
-<script context="module">
-	export async function load({ session }) {
+<script context="module" lang="ts">
+	import type { ErrorLoad } from '@sveltejs/kit';
+
+	export const load: ErrorLoad = ({ session }) => {
 		return {
 			props: {
 				user: session.ghUser
 			}
 		};
-	}
+	};
 </script>
 
 <script>
