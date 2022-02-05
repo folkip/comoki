@@ -8,8 +8,9 @@ declare namespace App {
 	// eslint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Platform {}
 
-	// eslint-disable-next-line @typescript-eslint/no-empty-interface
-	interface Session {}
+	interface Session {
+		ghUser: string;
+	}
 
 	// eslint-disable-next-line @typescript-eslint/no-empty-interface
 	interface Stuff {}
