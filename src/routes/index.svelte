@@ -12,25 +12,43 @@
 
 <script>
 	export let user;
+
+	import { GitHubButton, GoogleButton } from '../components/Buttons';
 </script>
 
 <main>
-	<h1>Comoki</h1>
+	<div class="max-w-3xl pb-12 mx-auto text-center md:pb-20">
+		<h1 class="h1">Comoki</h1>
+	</div>
 
 	{#if user}
-		<h2>Welcome {user}</h2>
 		<form action="/logout">
 			<button>Logout</button>
 		</form>
 	{:else}
 		<form action="/login">
-			<button>Login using Github</button>
+			<div class="buttons">
+				<GoogleButton />
+				<GitHubButton />
+			</div>
 		</form>
 	{/if}
 </main>
 
 <style>
 	main {
-		background-color: lightcyan;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: lightgray;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 </style>
