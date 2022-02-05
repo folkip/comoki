@@ -13,7 +13,7 @@ export const get: RequestHandler = async ({ locals, url }) => {
 		status: 302,
 		headers: {
 			location: '/',
-			'set-cookie': [`user=${user.login || ''}; Path=/; HttpOnly`]
+			'set-cookie': [`user=${user.login ?? ''}; Path=/; HttpOnly`]
 		}
 	};
 };
