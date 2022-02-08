@@ -11,8 +11,8 @@
 	};
 </script>
 
-<script>
-	export let status, error;
+<script lang="ts">
+	export let status: number, error: string;
 </script>
 
 <main>
