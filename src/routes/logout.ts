@@ -7,7 +7,7 @@ export const get: RequestHandler = (req) => {
 		status: 302,
 		headers: {
 			location: '/',
-			'set-cookie': `ghUser=; expires=Thu, 18 Dec 2013 12:00:00 UTC; Path=/; HttpOnly`
+			'set-cookie': `user=; expires=Thu, 18 Dec 2013 12:00:00 UTC; Path=/; HttpOnly`
 		}
 	};
 };
