@@ -2,6 +2,15 @@
 	import type { ErrorLoad } from '@sveltejs/kit';
 
 	export const load: ErrorLoad = ({ session }) => {
+		const { ghUser } = session;
+
+		if (!ghUser) {
+			return {
+				status: 302,
+				redirect: '/login'
+			};
+		}
+
 		return {
 			props: {
 				user: session.ghUser
@@ -10,45 +19,17 @@
 	};
 </script>
 
-<script>
-	export let user;
-
-	import { GitHubButton, GoogleButton } from '../components/Buttons';
+<script lang="ts">
+	export let user: string;
 </script>
 
-<main>
-	<div class="max-w-3xl pb-12 mx-auto text-center md:pb-20">
-		<h1 class="h1">Comoki</h1>
-	</div>
+<h1>Hey {user}</h1>
 
-	{#if user}
-		<form action="/logout">
-			<button>Logout</button>
-		</form>
-	{:else}
-		<form action="/login">
-			<div class="buttons">
-				<GoogleButton />
-				<GitHubButton />
-			</div>
-		</form>
-	{/if}
-</main>
+<form action="/logout">
+	<button>Logout</button>
+</form>
 
-<style>
-	main {
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-color: lightgray;
-	}
-
-	.buttons {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-</style>
+<form action="/post_image">
+	<input type="file" />
+	<input type="submit" />
+</form>
