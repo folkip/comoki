@@ -1,7 +1,3 @@
-import { configure, getLogger } from 'log4js';
+import pino from 'pino';
 
-configure('data.log');
-
-const logger = getLogger('logger');
-
-export default logger;
+export default pino(pino.destination('./logs.txt'));
