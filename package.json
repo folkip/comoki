@@ -36,8 +36,8 @@
 	"dependencies": {
 		"cookie": "^0.4.1",
 		"dotenv": "^15.0.0",
-		"log4js": "^6.4.1",
 		"mysql2": "^2.3.3",
-		"nanoid": "^3.2.0"
+		"nanoid": "^3.2.0",
+		"pino": "^7.6.5"
 	}
 }

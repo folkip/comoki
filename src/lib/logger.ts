@@ -1,7 +1,8 @@
-import { configure, getLogger } from 'log4js';
+import pino from 'pino';
 
-configure('data.log');
+const time = new Date();
 
-const logger = getLogger('logger');
+// Example file -> logs/09-02-2022-15-59-49.log
+const filename = `logs/${time.getUTCDay()}-${time.getUTCMonth()}-${time.getUTCFullYear()}-${time.getUTCHours()}-${time.getUTCMinutes()}-${time.getUTCSeconds()}.log`;
 
-export default logger;
+export default pino(pino.destination(filename));
