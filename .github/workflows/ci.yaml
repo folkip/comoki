@@ -11,5 +11,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: yarn
-      - run: yarn lint
+      - run: corepack enable
+      - run: pnpm install
+      - run: pnpm lint

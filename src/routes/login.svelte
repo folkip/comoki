@@ -6,7 +6,7 @@
 
 		if (ghUser) {
 			return {
-				redirect: '/'
+				redirect: '/home'
 			};
 		}
 
