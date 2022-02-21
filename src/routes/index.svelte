@@ -22,7 +22,7 @@
 				<nav class="bg-indigo-100 w-full h-14 hidden lg:flex p-4 justify-between fixed z-40">
 					<div class="h-auto w-auto">
 						<a href="./index.svelte" class="text-3xl font-bold">
-							Fitness<span class="text-blue-500">.</span>
+							Comoki<span class="text-blue-500">.</span>
 						</a>
 					</div>
 					<div class="flex space-x-8">
@@ -34,10 +34,12 @@
 						<a href="./index.svelte" class="text-md font-normal text-gray-400"> Friends </a>
 						<a href="./index.svelte" class="text-md font-normal text-gray-400"> About </a>
 					</div>
-					<div class="flex space-x-4">
-						<button class="bg-blue-500 text-white  px-4 rounded-md"> Login </button>
+					<form class="flex space-x-4">
+						<button formaction="/login" class="bg-blue-500 text-white  px-4 rounded-md">
+							Login
+						</button>
 						<button class="bg-blue-500 text-white  px-4 rounded-md"> Sign Up </button>
-					</div>
+					</form>
 				</nav>
 			</div>
 
