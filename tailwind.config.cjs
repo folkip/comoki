@@ -1,7 +1,11 @@
 module.exports = {
 	content: ['./src/**/*.svelte'],
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				Courier: ['Courier Prime', 'Courier', 'monospace']
+			}
+		}
 	},
-	plugins: []
+	plugins: [require('tailwindcss-textshadow')]
 };
